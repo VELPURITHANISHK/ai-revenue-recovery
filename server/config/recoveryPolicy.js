@@ -1,0 +1,10 @@
+﻿module.exports = {
+  MAX_RETRIES: 3,
+  MAX_REMINDERS: 2,
+  MAX_TOTAL_ATTEMPTS: 5,
+  HIGH_VALUE_THRESHOLD: 10000,
+  DEMO_DELAYS: {
+    CHECK_PAYMENT: 10, // seconds
+    DEFAULT: 10
+  }
+};

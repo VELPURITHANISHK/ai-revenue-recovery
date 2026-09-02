@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2023",
+    "module": "esnext",
+    "lib": ["ES2023", "DOM"],
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler"
+  },
+  "include": ["src"]
+}
