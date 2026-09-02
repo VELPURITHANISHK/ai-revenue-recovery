@@ -306,7 +306,7 @@ const RecoveryCase = () => {
       )}
 
       {caseData?.case?.status === 'ESCALATED' && (
-        <div className="mb-8 p-6 bg-gradient-to-r from-red-500 to-red-600 rounded-xl shadow-lg text-white flex justify-between items-center">
+        <div className="mb-8 p-6 bg-red-600 rounded-xl shadow-lg text-white flex justify-between items-center">
           <div>
             <h2 className="text-3xl font-extrabold flex items-center mb-2">
               <Users className="w-8 h-8 mr-2" />
@@ -317,8 +317,11 @@ const RecoveryCase = () => {
               <span>AI recommendation: Contact customer manually.</span>
             </div>
           </div>
-          <button className="bg-white text-red-600 px-6 py-2 rounded-lg font-bold shadow hover:bg-red-50">
-            View Case
+          <button 
+            onClick={() => navigate('/escalations')}
+            className="bg-white text-red-600 px-6 py-2 rounded-lg font-bold shadow hover:bg-red-50"
+          >
+            View Escalations
           </button>
         </div>
       )}
