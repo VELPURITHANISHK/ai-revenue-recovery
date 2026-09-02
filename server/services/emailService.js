@@ -37,6 +37,11 @@ const sendPaymentReminder = async ({ customerName, email, amount, orderId, payme
       subject,
       text: body,
     });
+
+    if (result.error) {
+      throw new Error(result.error.message);
+    }
+
     console.log(`[EMAIL] Sent real email via Resend to ${email}: ${result.id}`);
     return { success: true, id: result.id, mode: 'real' };
   }

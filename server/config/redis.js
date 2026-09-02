@@ -11,6 +11,7 @@ const parseRedisUrl = (url) => {
       host:                  u.hostname || 'localhost',
       port:                  parseInt(u.port || '6379'),
       password:              u.password || undefined,
+      tls:                   u.protocol === 'rediss:' ? { rejectUnauthorized: false } : undefined,
       maxRetriesPerRequest:  null,          // required by BullMQ
       retryStrategy:         (times) => Math.min(times * 500, 5000), // retry with backoff up to 5s
     };
